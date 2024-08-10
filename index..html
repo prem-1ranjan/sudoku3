@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sudoku Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sudoku Table -->
+    <table id="sudoku-grid"></table>
+    
+    <!-- Navigation Buttons -->
+    <div id="navigation">
+        <button id="prev-button">Previous Puzzle</button>
+        <button id="next-button">Next Puzzle</button>
+        <button id="check-button">Check</button>
+    </div>
+    
+    <!-- Modal Container -->
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2>You did it,Another puzzle conquered. 💖</h2>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #FFF9E6, #FEE8B3);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars during animation */
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+    background-color: #FFF6E5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+td {
+    border: 2px solid #F8E1A0;
+    padding: 5px;
+}
+
+input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    background-color: #FDF7E4;
+    font-size: 18px;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    background-color: #FFEB99;
+}
+
+button {
+    background-color: #F4C542;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #F9A825;
+}
+
+#navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#navigation button {
+    background-color: #F4C542;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#navigation button:hover {
+    background-color: #F9A825;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content h2 {
+    color: #F4C542;
+    margin: 0;
+}
+
+.modal-content button {
+    background-color: #F4C542;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #F9A825;
+}
+
+/* Confetti Animation */
+@keyframes confetti {
+    0% { transform: translateY(-1000px); opacity: 1; }
+    100% { transform: translateY(1000px); opacity: 0; }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #FFC0CB, #FFB6C1, #FF69B4);
+    border-radius: 50%;
+    animation: confetti 2s ease-out infinite;
+}
+
+.confetti:nth-child(2) {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    animation-delay: 0.5s;
+}
+
+.confetti:nth-child(3) {
+    background: linear-gradient(45deg, #E6E6FA, #D8BFD8);
+    animation-delay: 1s;
+}
